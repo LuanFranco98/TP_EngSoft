@@ -3,7 +3,7 @@
 
 
 Membros da equipe:<\br>
-<\br>
+<br>
 <\br>
 •	Álvaro Rodrigues<\br>
 •	Carlos Carvalho<\br>
