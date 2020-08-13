@@ -22,13 +22,11 @@ Tecnologias:<br>
 Frontend: Vue.js<br>
 Backend: Flask<br>
 Banco de dados: MySQL<br>
-<br>
-<br>
-___________________________________________________________________________________________________________________________________________________________________________________
-<br>  
+
+_________________________________________________________________________________________________________________________________________________________________________________
 <h3> Sprint Planning </h3>
 <br>
-### Histórias:
+<h5> Histórias:</h5>
 <br>
 •	  Definição de área para cadastro e login.<br>
 •	  Possibilidade de Upload de datasets.<br>
@@ -39,7 +37,7 @@ ________________________________________________________________________________
 •		Geração de Relatório TXT para download.<br>
 •		Geração de Gráficos em JPG para download.<br>
 <br>
-### Tarefas e respectivos responsáveis:
+<h5> Tarefas e respectivos responsáveis:</h5>
 •<br>
 •<br>
 •<br>
