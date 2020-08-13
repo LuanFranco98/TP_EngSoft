@@ -24,9 +24,9 @@ Backend: Flask<br>
 Banco de dados: MySQL<br>
 
 _________________________________________________________________________________________________________________________________________________________________________________
-<h3> Sprint Planning </h3>
+<h2> Sprint Planning </h2>
 <br>
-<h5> Histórias:</h5>
+<h3> Histórias:</h3>
 <br>
 •	  Definição de área para cadastro e login.<br>
 •	  Possibilidade de Upload de datasets.<br>
@@ -37,7 +37,7 @@ ________________________________________________________________________________
 •		Geração de Relatório TXT para download.<br>
 •		Geração de Gráficos em JPG para download.<br>
 <br>
-<h5> Tarefas e respectivos responsáveis:</h5>
+<h3> Tarefas e respectivos responsáveis:</h3>
 •<br>
 •<br>
 •<br>
