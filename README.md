@@ -74,5 +74,5 @@ ________________________________________________________________________________
     •	Sistema drag-and-drop para a manipulação e disposição dos plots<br> 
 <br>
 <h3>Divisão das tarefas:</h3>
-Tópicos 1, 2 e 3 ficaram sob responsabildiade de Luan Franco e Carlos Carvalho enquanto os tópicos 4, 5 e 6 ficaram sob responsabilidade de Mateus Figueiredo e Álvaro Rodrigues<br>
+Tópicos 1, 2 e 3 ficaram sob responsabildiade de Carlos Carvalho e Luan Franco enquanto os tópicos 4, 5 e 6 ficaram sob responsabilidade de Álvaro Rodrigues e Mateus Figueiredo <br>
     
