@@ -33,7 +33,7 @@ ________________________________________________________________________________
 •		Manuseio de dados por tabelas.<br>
 •		Ferramentas de cálculos sobre os dados.<br>
 •		Plotagem de gráficos de diversos tipos.<br>
-•		Interface gráfica do dashboard<.<br>
+•		Interface gráfica do dashboard.<br>
 <br>
 <h3> Tarefas:</h3>
 <br>
