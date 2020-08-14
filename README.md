@@ -56,13 +56,11 @@ ________________________________________________________________________________
     •	Calculo de estatísticas básicas dos dados<br>
     •	Opções de tratamento de dados básicas (remover nulos, etc)<br>
 5.	Plotagem de gráficos de diversos tipo<br>
-<itemize>
     •	Integração com API gráfica de plotagem<br>
     •	Integração com as estruturas tabulares como fonte de dados<br>
     •	Interface para configuração dos plots<br>
     •	Sistema de filtros individuas por visualização<br>
     •	Exportação da visualização em formato de imagem estática<br>
-    <itemize>
 6.	Interface gráfica do dashboard<br>
     •	Sistema de menus com as opções de configuração<br>
     •	Integração do menu com as demais interfaces (login, ingestão de dados, etc)<br>
