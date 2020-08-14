@@ -30,19 +30,44 @@ ________________________________________________________________________________
 <br>
 •	  Definição de área para cadastro e login.<br>
 •	  Possibilidade de Upload de datasets.<br>
-•		Organização de dados que possibilita separação de dados relevantes.<br>
 •		Manuseio de dados por tabelas.<br>
 •		Ferramentas de cálculos sobre os dados.<br>
 •		Plotagem de gráficos de diversos tipos.<br>
-•		Geração de Relatório TXT para download.<br>
 •		Geração de Gráficos em JPG para download.<br>
 <br>
-<h3> Tarefas e respectivos responsáveis:</h3>
-•<br>
-•<br>
-•<br>
-•<br>
-•<br>
+<h3> Tarefas:</h3>
 <br>
+1.	Definição da área para cadastro e login<br>
+    •	Interface para login/cadastro<br>
+    •	Conectividade com o banco de dados de usuários<br>
+    •	Infraestrutura do banco de dados<br>
+2.	Possibilidade de upload de datasets<br>
+    •	Interface para ingestão de dados<br>
+    •	Conectividade com bancos externos<br>
+    •	Conectividade com o sistema de arquivos local<br>
+    •	Definição de estruturas tabulares pós ingestão de dados<br>
+3.	Manuseio de dados por tabelas<br>
+    •	Interface para visualização de dados tabulares<br>
+    •	Criação de filtros para as tabelas<br>
+    •	Ordenação por colunas<br>
+4.	Ferramentas de cálculos sobre os dados<br>
+    •	Integração com o sistema de manuseio de dados por tabelas<br>
+    •	Adicionar colunas usando como base colunas já existentes<br>
+    •	Calculo de estatísticas básicas dos dados<br>
+    •	Opções de tratamento de dados básicas (remover nulos, etc)<br>
+5.	Plotagem de gráficos de diversos tipo<br>
+    •	Integração com API gráfica de plotagem<br>
+    •	Integração com as estruturas tabulares como fonte de dados<br>
+    •	Interface para configuração dos plots<br>
+    •	Sistema de filtros individuas por visualização<br>
+    •	Exportação da visualização em formato de imagem estática<br>
+6.	Interface gráfica do dashboard<br>
+    •	Sistema de menus com as opções de configuração<br>
+    •	Integração do menu com as demais interfaces (login, ingestão de dados, etc)<br>
+    •	Interface para disposição das visualizações<br>
+    •	Inserção de texto no dashboard (títulos, caixas de texto, etc)<br>
+    •	Sistema drag-and-drop para a manipulação e disposição dos plots<br> 
 <br>
-
+<h3>Divisão das tarefas:</h3>
+Tópicos 1, 2 e 3 ficaram sob responsabildiade de Luan Franco e Carlos Carvalho enquanto os tópicos 4, 5 e 6 ficaram sob responsabilidade de Mateus Figueiredo e Álvaro Rodrigues<br>
+    
