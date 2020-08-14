@@ -41,26 +41,31 @@ ________________________________________________________________________________
     •	Interface para login/cadastro<br>
     •	Conectividade com o banco de dados de usuários<br>
     •	Infraestrutura do banco de dados<br>
+    <br>
 2.	Possibilidade de upload de datasets<br>
     •	Interface para ingestão de dados<br>
     •	Conectividade com bancos externos<br>
     •	Conectividade com o sistema de arquivos local<br>
     •	Definição de estruturas tabulares pós ingestão de dados<br>
+    <br>
 3.	Manuseio de dados por tabelas<br>
     •	Interface para visualização de dados tabulares<br>
     •	Criação de filtros para as tabelas<br>
     •	Ordenação por colunas<br>
+    <br>
 4.	Ferramentas de cálculos sobre os dados<br>
     •	Integração com o sistema de manuseio de dados por tabelas<br>
     •	Adicionar colunas usando como base colunas já existentes<br>
     •	Calculo de estatísticas básicas dos dados<br>
     •	Opções de tratamento de dados básicas (remover nulos, etc)<br>
+    <br>
 5.	Plotagem de gráficos de diversos tipo<br>
     •	Integração com API gráfica de plotagem<br>
     •	Integração com as estruturas tabulares como fonte de dados<br>
     •	Interface para configuração dos plots<br>
     •	Sistema de filtros individuas por visualização<br>
     •	Exportação da visualização em formato de imagem estática<br>
+    <br>
 6.	Interface gráfica do dashboard<br>
     •	Sistema de menus com as opções de configuração<br>
     •	Integração do menu com as demais interfaces (login, ingestão de dados, etc)<br>
