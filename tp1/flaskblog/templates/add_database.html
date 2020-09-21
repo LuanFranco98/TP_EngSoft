@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content%}
+<div class= "content-section">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <fieldset class='form-group'>
+            <legend class="border-bottom mb-4">Add Dataset</legend>
+            <div class="form-group">
+                {{form.dataset.label()}}
+                {{form.dataset(class="form-control-file")}}
+                {%if form.dataset.errors %}
+                    {% for error in form.dataset.errors %}
+                        <span class="text-danger">{{error}}</span>
+                    {% endfor %}
+                {% endif %}                        
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{form.submit(class="btn btn-outline-info")}}
+        </div>
+    </form>
+</div> 
+{% endblock content%}

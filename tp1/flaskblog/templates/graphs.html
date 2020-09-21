@@ -1,0 +1,36 @@
+{% extends "layout_header.html" %}
+{% block content%}
+<div class="container">
+    <canvas id="myChart" width="600" height="400"></canvas>
+</div>
+<script>        
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: {{graph_info.graph_type}},
+        data: {
+            labels: [{% for item in graph_info.x_values %}
+                        item
+                     {% endfor %}
+            ]
+            datasets: [{
+                label: {{y_column_name}},
+                data: [{% for item in graph_info.x_values %}
+                        item
+                     {% endfor %}
+            ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+
+{% endblock content%}

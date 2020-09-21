@@ -1,0 +1,33 @@
+If like me, you ended up wanting to play with the database after making all the changes that Corey did in this video and didn't know what to do, here is a working solution:
+
+1) Make sure to activate the appropriate virtual environment to work with all needed packages.
+2) Open a Python interpreter at the root of your project directory (in the same directory as run.py).
+3) Execute the following code (without comments if you wish):
+
+from flaskblog import create_app, db
+app = create_app()
+# context to run outside the application (no need to launch the server)
+ctx = app.app_context()
+ctx.push()  # start working on database after that command
+# Database manipulations here
+# ...
+    <!---
+        #Aqui rodar os seguintes comandos se eu criar alguma tabela nova ou modificar uma existente:
+        db.drop_all
+        db.create_all
+        #Pra ver se ta certinho roda os seguintes:
+        from flaskblog.models import (classes_novas_ou_antigas_pra_ver_se_ainda_tao_funcionando)
+        #e esse comando abaixo deve retornar uma lista vazia 
+        Classe1.query.all()
+        
+    ---!>
+
+#...
+ctx.pop()  # exit from the app
+exit()
+
+This explanation comes from StackOverflow here: https://stackoverflow.com/questions/24060553/creating-a-database-outside-the-application-context
+
+As explained on that same page at StackOverflow, you could use a "with" block like so:
+"with app.app_context():"
+and skip all commands with ctx as shown above, but then you would have to enter everything at once inside the "with" block. If you are going to work directly inside the Python interpreter and not from a script, the first method would be more easy to work with... instead of "with" ;).
