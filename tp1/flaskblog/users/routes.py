@@ -8,6 +8,7 @@ from flaskblog.users.utils import save_picture , save_dataset
 
 import plotly.express as px
 import pandas as pd
+import os
 
 users = Blueprint('users', __name__)
 
@@ -96,6 +97,9 @@ def add_database():
 
     return render_template('add_database.html', title='Add Database', form=form)    
 
+@users.route("/static_graph")
+def static_graph():
+    return render_template('graphs.html', title="Static Graph")
 
 @users.route("/data_visualization", methods=['GET', 'POST'])
 @login_required
@@ -118,18 +122,24 @@ def data_visualization():
             self.y_column_name = column2_name
             self.y_values = y_values
 
-    graph_type = X_dataset_name= X_column_name = Y_dataset_name = Y_column_name = ''
+    #graph_type = dataset_X_name= column_X_name = dataset_Y_name = column_Y_name = ''
     
-    # form for graph X axis
+    #not sure how to do it in a more clever way
+    database = Dataset.query.filter_by(owner=current_user).with_entities(Dataset.dataset_file).all()
+    database = [dataset[0] for dataset in database]
     
-    form = Graph_Creation_Form()
-    
-    graph_type = str(form.graph_type.data)
-    dataset_X_name = str(form.dataset_X_name.data)
-    column_X_name = str(form.column_X_name.data)
-    dataset_Y_name = str(form.dataset_Y_name.data)
-    column_Y_name = str(form.column_Y_name.data)
-    
+    form = Graph_Creation_Form(request.form)
+    if form.validate_on_submit():
+        print('validate on submit')
+        graph_type = str(form.graph_type.data)
+        dataset_X_name = str(form.dataset_X_name.data)
+        column_X_name = str(form.column_X_name.data)
+        dataset_Y_name = str(form.dataset_Y_name.data)
+        column_Y_name = str(form.column_Y_name.data)
+    else:
+        flash("Something didn't go as planned, please double-check your data",'danger')
+
+    '''
     #checking if infos are correct to avoid errors
     df_X = None
     df_Y = None
@@ -137,21 +147,24 @@ def data_visualization():
     if graph_type not in ['BAR', 'LINE']:
         print('funciona porra')
         ok = False
-
+    
+    root_path = os.getcwd() + '/flaskblog/'
     if ok and ((dataset_X_name or dataset_Y_name) not in database):
         print('caralhooooooo')
         ok = False
-    else:
+    elif ok:
         try:
-            df_X = pd.read_csv(dataset_X_name)
-        except:
-            print('bbbbbbbbbbbbbbbbb')
+            df_X = pd.read_csv(root_path + url_for('static', filename='databases/' + dataset_X_name))
+        except Exception as e:
+            print(e)
+            ok = False
             pass
 
         try:
-            df_Y = pd.read_csv(dataset_Y_name)
-        except:
-            print('aaaaaaaaaaaaaaaaaaa')
+            df_Y = pd.read_csv(root_path + url_for('static', filename='databases/' + dataset_Y_name))
+        except Exception as e:
+            print(e)
+            ok = False
             pass
 
     
@@ -159,11 +172,14 @@ def data_visualization():
         if column_X_name not in df_X.columns.columns.tolist():
             ok = False
             print('buceta ')
-        else:
+        elif ok:
             try:
                 df_X = df_X[column_X_name].tolist()
-            except:
-                print('disgraca pelada ')
+            except Exception as e:
+                print('-----------------Erro-----------')
+                print(e)
+                print('-----------------Erro-----------')
+                ok = False
                 pass
 
         if column_Y_name not in df_Y.columns.tolist():
@@ -173,6 +189,7 @@ def data_visualization():
             try:
                 df_Y = df_Y[column_Y_name].tolist()
             except:
+                ok = False
                 print('cu de apertar linguica ')
                 pass
     
@@ -181,6 +198,8 @@ def data_visualization():
         render_template('graphs.html', title='Data Visualization', graph_info=graph_info)
     else:
         flash("Something didn't go as planned, please double-check your data",'danger')
+    
+    '''
     
     return render_template('data_visualization.html', title='Data Visualization', form = form)
 
